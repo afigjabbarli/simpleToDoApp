@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            user-select: none;
+            font-size: 16px;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            height: auto;
+            width: 100%;
+        }
+
+        main {
+            height: auto;
+            width: 100%;
+        }
+
+        section {
+            height: auto;
+            width: 100%;
+            padding: 50px 0px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0px auto;
+            height: auto;
+        }
+
+        #toDoItems {
+            width: 100%;
+            height: auto;
+            padding: 100px;
+            background-color: darkslategray;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2.5rem;
+        }
+
+        .toDoItem {
+            width: 100%;
+            height: auto;
+            padding: 50px;
+            background-color: #FFF;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2.5rem;
+        }
+
+        .toDoItemLeftSide {
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        .formItem {
+            width: calc((100% - 5rem) / 3);
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+
+        .toDoItemRightSide {
+            width: calc(25% - 2.5rem);
+        }
+
+        input {
+            width: 100%;
+            height: auto;
+            padding: .5rem;
+            font-size: 14px;
+            border-radius: 0.25rem;
+        }
+
+        label {
+            width: 100%;
+            height: auto;
+            padding: .5rem;
+            font-size: 16px;
+            color: darkslategray;
+        }
+
+        select {
+            width: 100%;
+            height: auto;
+            padding: .5rem;
+            font-size: 14px;
+            border-radius: 0.25rem;
+        }
+
+        .toDoItemRightSide .toDoOptions {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap: 2.5rem;
+        }
+
+        button {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            font-weight: bold;
+            border-radius: .5rem;
+            color: #FFF;
+            border: 0;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: scale(1.025);
+        }
+
+        #delete {
+            background-color: crimson;
+        }
+
+        #update {
+            background-color: #198754;
+        }
+        #enable{
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section>
+            <div class="container">
+                <form action="" method="post" id="form">
+                    
+                </form>
+                <ul id="toDoItems">
+                    <li class="toDoItem">
+                        <form method="post" id="toDoForm" class="toDoItemLeftSide">
+                            <div class="formItem">
+                                <label for="toDoName">To-do name:</label>
+                                <input type="text" id="toDoName" name="toDoName" value="Test to-do" disabled>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoDescription">To-do description:</label>
+                                <input type="text" id="toDoDescription" name="toDoDescription"
+                                    value="Test to-do description" disabled>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoNote">To-do note:</label>
+                                <input type="text" id="toDoNote" name="toDoNote" value="Test to-do note" disabled>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoPriority">To-do priority:</label>
+                                <select name="toDoPriority" id="toDoPriority" value="High" disabled="disabled">
+                                    <option value="High">High</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="toDoItemRightSide">
+                            <div class="toDoOptions">
+                                <button id="enable" type="button">Enable</button>
+                                <button id="delete" type="button">Delete</button>
+                                <button id="update" type="button">Update</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
