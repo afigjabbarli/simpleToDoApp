@@ -42,6 +42,9 @@
             width: 80%;
             margin: 0px auto;
             height: auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
         }
 
         #toDoItems {
@@ -142,8 +145,56 @@
         #update {
             background-color: #198754;
         }
-        #enable{
+
+        #enable {
             background-color: #0d6efd;
+        }
+
+        #form {
+            padding: 25px;
+            background-color: darkslategray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            flex-direction: row;
+            gap: 25px;
+        }
+
+        #form .form_item {
+            width: calc((100% - 25px) / 2);
+            display: flex;
+            flex-direction: column;
+            row-gap: .5rem;
+        }
+
+        #form .form_item label {
+            width: 100%;
+            height: auto;
+            padding: .5rem;
+            font-size: 16px;
+            color: #FFF;
+        }
+
+        .btnGroup {
+            width: 40%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            column-gap: 25px;
+        }
+
+        .btnGroup button {
+            padding: 1.25rem;
+        }
+
+        .btnGroup #save {
+            background-color: #198754;
+            border: 1px solid #FFF;
+        }
+
+        .btnGroup #reset {
+            background-color: #0d6efd;
+            border: 1px solid #FFF;
         }
     </style>
 </head>
@@ -154,7 +205,33 @@
         <section>
             <div class="container">
                 <form action="" method="post" id="form">
-                    
+                    <div class="form_item">
+                        <label for="toDoName">To-do name:</label>
+                        <input type="text" id="toDoName" name="toDoName" value="Test to-do">
+                    </div>
+
+                    <div class="form_item">
+                        <label for="toDoDescription">To-do description:</label>
+                        <input type="text" id="toDoDescription" name="toDoDescription" value="Test to-do description">
+                    </div>
+
+                    <div class="form_item">
+                        <label for="toDoNote">To-do note:</label>
+                        <input type="text" id="toDoNote" name="toDoNote" value="Test to-do note">
+                    </div>
+
+                    <div class="form_item">
+                        <label for="toDoPriority">To-do priority:</label>
+                        <select name="toDoPriority" id="toDoPriority" value="High">
+                            <option value="High">High</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                        </select>
+                    </div>
+                    <div class="btnGroup">
+                        <button id="reset" type="button" onclick="resetForm()">Reset</button>
+                        <button id="save" type="submit">Save</button>
+                    </div>
                 </form>
                 <ul id="toDoItems">
                     <li class="toDoItem">
@@ -197,7 +274,7 @@
         </section>
     </main>
     <footer></footer>
-    <script src="./script.js"></script>
+    <script src="./toDo.js"></script>
 </body>
 
 </html>
