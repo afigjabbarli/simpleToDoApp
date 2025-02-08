@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./source/css/style.css">
+    <title>ToDoApp</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <!-- <section id="search">
+            <div class="container">
+                <form id="searchForm" action="" method="post">
+                   
+                </form>
+            </div>
+        </section> -->
+
+        <section id="create">
+            <div class="container">
+                <form action="" method="post" id="createForm">
+                    <div class="formItem">
+                        <label for="toDoName">To-do name:</label>
+                        <input type="text" name="toDoName" id="toDoName" placeholder="please enter to-do name...">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoDescription">To-do description:</label>
+                        <input type="text" name="toDoDescription" id="toDoDescription"
+                            placeholder="please enter to-do description...">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoNote">To-do note:</label>
+                        <input type="text" name="toDoNote" id="toDoNote" placeholder="please enter to-do note...">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoAuthor">To-do author:</label>
+                        <select name="toDoAuthor" id="toDoAuthor" value="default">
+                            <option value="default">🔽Please select author of to-do...
+                            </option>
+                            <option value="john_doe">John Doe</option>
+                            <option value="jane_smith">Jane Smith</option>
+                            <option value="michael_johnson">Michael Johnson</option>
+                            <option value="emily_davis">Emily Davis</option>
+                            <option value="daniel_wilson">Daniel Wilson</option>
+                            <option value="sophia_martinez">Sophia Martinez</option>
+                            <option value="david_anderson">David Anderson</option>
+                            <option value="olivia_taylor">Olivia Taylor</option>
+                            <option value="james_white">James White</option>
+                            <option value="emma_harris">Emma Harris</option>
+                        </select>
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoDeadline">To-do deadline:</label>
+                        <input type="datetime-local" name="toDoDeadline" id="toDoDeadline"
+                            placeholder="please enter to-do deadline...">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoPriority">To-do priority:</label>
+                        <select name="toDoPriority" id="toDoPriority" value="default">
+                            <option value="default">🔽 Please select priority of to-do...
+                            </option>
+                            <option value="urgent">🚨 Urgent</option>
+                            <option value="high">🔥 High Priority</option>
+                            <option value="medium">⏳ Medium Priority</option>
+                            <option value="low">📌 Low Priority</option>
+                        </select>
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoStartDate">To-do start date:</label>
+                        <input type="datetime-local" name="toDoStartDate" id="toDoStartDate"
+                            placeholder="please enter to-do start date...">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="assignedUser">To-do assignee:</label>
+                        <select name="assignedUser" id="assignedUser" value="default">
+                            <option value="default">🔽 Please select assigned user...</option>
+                            <option value="john_doe">John Doe</option>
+                            <option value="jane_smith">Jane Smith</option>
+                            <option value="michael_johnson">Michael Johnson</option>
+                            <option value="emily_davis">Emily Davis</option>
+                            <option value="daniel_wilson">Daniel Wilson</option>
+                            <option value="sophia_martinez">Sophia Martinez</option>
+                            <option value="david_anderson">David Anderson</option>
+                            <option value="olivia_taylor">Olivia Taylor</option>
+                            <option value="james_white">James White</option>
+                            <option value="emma_harris">Emma Harris</option>
+                        </select>
+                    </div>
+
+                    <div class="formItem">
+                        <label for="toDoCollaborators">To-do collaborators:</label>
+                        <div class="custom-input" id="customInput">
+                            <span>🔽</span>
+                            <p>Please enter to-do collaborators...</p>
+                            <img src="./source/assets/icons/arrow_down.svg" alt="">
+                        </div>
+                        <ul id="toDoCollaborators" class="toDoCollaboratorsDeActive">
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="john_doe">
+                                <p>John Doe</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="jane_smith">
+                                <p>Jane Smith</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="michael_johnson">
+                                <p>Michael Johnson</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="emily_davis">
+                                <p>Emily Davis</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="daniel_wilson">
+                                <p>Daniel Wilson</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="sophia_martinez">
+                                <p>Sophia Martinez</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="david_anderson">
+                                <p>David Anderson</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="olivia_taylor">
+                                <p>Olivia Taylor</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="james_white">
+                                <p>James White</p>
+                            </li>
+                            <li class="toDoCollaborator">
+                                <input type="checkbox" name="collaborators" value="emma_harris">
+                                <p>Emma Harris</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="btnGroups">
+                        <button type="button"><img src="./source/assets/icons/refresh.svg" alt="">
+                            <p>Reset</p>
+                        </button>
+                        <button type="submit"><img src="./source/assets/icons/save.svg" alt="">
+                            <p>Save</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="toDo_s">
+            <div class="container">
+                <ul id="toDoItems">
+                    <li class="toDoItem">
+                        <form class="updateForm" action="" method="post">
+
+                            <div class="formItem">
+                                <label for="toDoName">To-do name:</label>
+                                <input type="text" name="toDoName" id="toDoName"
+                                    placeholder="please enter to-do name...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoDescription">To-do description:</label>
+                                <input type="text" name="toDoDescription" id="toDoDescription"
+                                    placeholder="please enter to-do description...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoNote">To-do note:</label>
+                                <input type="text" name="toDoNote" id="toDoNote"
+                                    placeholder="please enter to-do note...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoAuthor">To-do author:</label>
+                                <select name="toDoAuthor" id="toDoAuthor" value="default">
+                                    <option value="default">🔽Please select author of to-do...
+                                    </option>
+                                    <option value="john_doe">John Doe</option>
+                                    <option value="jane_smith">Jane Smith</option>
+                                    <option value="michael_johnson">Michael Johnson</option>
+                                    <option value="emily_davis">Emily Davis</option>
+                                    <option value="daniel_wilson">Daniel Wilson</option>
+                                    <option value="sophia_martinez">Sophia Martinez</option>
+                                    <option value="david_anderson">David Anderson</option>
+                                    <option value="olivia_taylor">Olivia Taylor</option>
+                                    <option value="james_white">James White</option>
+                                    <option value="emma_harris">Emma Harris</option>
+                                </select>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoDeadline">To-do deadline:</label>
+                                <input type="datetime-local" name="toDoDeadline" id="toDoDeadline"
+                                    placeholder="please enter to-do deadline...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoPriority">To-do priority:</label>
+                                <select name="toDoPriority" id="toDoPriority" value="default">
+                                    <option value="default">🔽 Please select priority of to-do...
+                                    </option>
+                                    <option value="urgent">🚨 Urgent</option>
+                                    <option value="high">🔥 High Priority</option>
+                                    <option value="medium">⏳ Medium Priority</option>
+                                    <option value="low">📌 Low Priority</option>
+                                </select>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoStartDate">To-do start date:</label>
+                                <input type="datetime-local" name="toDoStartDate" id="toDoStartDate"
+                                    placeholder="please enter to-do start date...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="assignedUser">To-do assignee:</label>
+                                <select name="assignedUser" id="assignedUser" value="default">
+                                    <option value="default">🔽 Please select assigned user...</option>
+                                    <option value="john_doe">John Doe</option>
+                                    <option value="jane_smith">Jane Smith</option>
+                                    <option value="michael_johnson">Michael Johnson</option>
+                                    <option value="emily_davis">Emily Davis</option>
+                                    <option value="daniel_wilson">Daniel Wilson</option>
+                                    <option value="sophia_martinez">Sophia Martinez</option>
+                                    <option value="david_anderson">David Anderson</option>
+                                    <option value="olivia_taylor">Olivia Taylor</option>
+                                    <option value="james_white">James White</option>
+                                    <option value="emma_harris">Emma Harris</option>
+                                </select>
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoCollaborators">To-do collaborators:</label>
+                                <div class="custom-input" id="customInput">
+                                    <span>🔽</span>
+                                    <p>Please enter to-do collaborators...</p>
+                                    <img src="./source/assets/icons/arrow_down.svg" alt="">
+                                </div>
+                                <ul id="toDoItemsCollaborators" class="toDoCollaboratorsDeActive">
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="john_doe">
+                                        <p>John Doe</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="jane_smith">
+                                        <p>Jane Smith</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="michael_johnson">
+                                        <p>Michael Johnson</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="emily_davis">
+                                        <p>Emily Davis</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="daniel_wilson">
+                                        <p>Daniel Wilson</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="sophia_martinez">
+                                        <p>Sophia Martinez</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="david_anderson">
+                                        <p>David Anderson</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="olivia_taylor">
+                                        <p>Olivia Taylor</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="james_white">
+                                        <p>James White</p>
+                                    </li>
+                                    <li class="toDoItemsCollaborator">
+                                        <input type="checkbox" name="collaborators" value="emma_harris">
+                                        <p>Emma Harris</p>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoCreateDate">To-do create date:</label>
+                                <input type="datetime-local" name="toDoCreateDate" id="toDoCreateDate"
+                                    placeholder="please enter to-do create date...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoUpdateDate">To-do update date:</label>
+                                <input type="datetime-local" name="toDoUpdateDate" id="toDoUpdateDate"
+                                    placeholder="please enter to-do update date...">
+                            </div>
+
+                            <div class="formItem">
+                                <label for="toDoStatus">To-do status:</label>
+                                <select name="toDoStatus" id="toDoStatus" value="default">
+                                    <option value="default">🔽 Please select to-do status...</option>
+                                    <option value="backlog">📋 Backlog</option>
+                                    <option value="todo">📝 To Do</option>
+                                    <option value="in-progress">🚀 In Progress</option>
+                                    <option value="waiting-for-review">⏳ Waiting for Review</option>
+                                    <option value="blocked">⛔ Blocked</option>
+                                    <option value="completed">✅ Completed</option>
+                                    <option value="archived">📦 Archived</option>
+                                </select>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <footer></footer>
+    <script src="./source/js/script.js"></script>
+</body>
+
+</html>
